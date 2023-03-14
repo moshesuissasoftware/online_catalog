@@ -1,0 +1,13 @@
+#import "./ProductFragment.graphql"
+
+query CustomerQuery($customerId: ID!) {
+  customer(customerId: $customerId) {
+    id
+    products {
+      ...Product
+    }
+    notificationState {
+      hasNewNotifications
+    }
+  }
+}

@@ -1,0 +1,58 @@
+#import './ProductFragment.graphql'
+
+query ProductFilterPageQuery(
+  $group: String
+  $slug: String
+  $path: String
+  $pageSize: Int
+  $offset: Int
+  $filters: String
+  $sorting: String
+) {
+  productFilterPage(slug: $slug, group: $group, path: $path) {
+    slug
+    name
+    preamble
+    filterValues {
+      filter
+      filterType
+      splitChar
+      values {
+        name
+        slug
+      }
+    }
+    permanentFilters {
+      key
+      value
+    }
+    meta {
+      title
+      description
+      keywords
+    }
+    products(
+      pageSize: $pageSize
+      offset: $offset
+      filters: $filters
+      sorting: $sorting
+    ) {
+      ...Product
+    }
+    total(filters: $filters)
+    bottomXhtml
+    promotions {
+      title
+      preamble
+      buttonText
+      buttonLink
+      image
+      order
+      backgroundColor
+    }
+  }
+  mainGroups {
+    name
+    slug
+  }
+}

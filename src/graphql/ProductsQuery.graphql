@@ -1,0 +1,7 @@
+#import './ProductFragment.graphql'
+
+query ProductsQuery($ids: [ID]) {
+  products(ids: $ids) {
+    ...Product
+  }
+}

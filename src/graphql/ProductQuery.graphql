@@ -1,0 +1,21 @@
+#import "./ProductFragment.graphql"
+
+query ProductQuery(
+  $slug: String
+  $filterPageSlug: String
+  $group: String
+  $path: String
+) {
+  product(
+    slug: $slug
+    filterPageSlug: $filterPageSlug
+    group: $group
+    path: $path
+  ) {
+    ...Product
+    media {
+      type
+      url
+    }
+  }
+}

@@ -1,0 +1,12 @@
+query AllProductsQuery {
+  products {
+    id
+    name
+    slug
+  }
+  productGroups {
+    id
+    name
+    slug
+  }
+}

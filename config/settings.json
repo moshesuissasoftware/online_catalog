@@ -1,0 +1,27 @@
+{
+  "_local": {
+    "gatewayAPI": "https://gateway-api.dev.nobiadigital.com/graphql?brand=magnet&client=opc",
+    "defaultGroup": "appliances",
+    "currency": "GBP"
+  },
+  "dev": {
+    "gatewayAPI": "https://gateway-api.dev.nobiadigital.com/graphql?brand=magnet&client=opc",
+    "defaultGroup": "appliances",
+    "currency": "GBP"
+  },
+  "test": {
+    "gatewayAPI": "https://gateway-api.test.nobiadigital.com/graphql?brand=magnet&client=opc",
+    "defaultGroup": "appliances",
+    "currency": "GBP"
+  },
+  "stage": {
+    "gatewayAPI": "https://gateway-api.stage.nobiadigital.com/graphql?brand=magnet&client=opc",
+    "defaultGroup": "appliances",
+    "currency": "GBP"
+  },
+  "prod": {
+    "gatewayAPI": "https://gateway-api.nobiadigital.com/graphql?brand=magnet&client=opc",
+    "defaultGroup": "appliances",
+    "currency": "GBP"
+  }
+}

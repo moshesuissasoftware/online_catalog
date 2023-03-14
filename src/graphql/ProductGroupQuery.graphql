@@ -1,0 +1,46 @@
+query ProductGroupQuery($slug: String) {
+  group(slug: $slug) {
+    name
+    slug
+    preamble
+    bottomXhtml
+    brand
+    filterPages {
+      id
+      key
+      slug
+      preamble
+      name
+      image
+      hideInListing
+    }
+    groups {
+      id
+      name
+      slug
+      preamble
+      image
+    }
+    meta {
+      title
+      description
+      keywords
+    }
+    banner {
+      title
+      preamble
+      buttonLink
+      buttonLinkText
+      backgroundImage
+    }
+    promotions {
+      title
+      preamble
+      buttonText
+      buttonLink
+      image
+      order
+      backgroundColor
+    }
+  }
+}

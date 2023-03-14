@@ -1,0 +1,5 @@
+healthcheck: /healthcheck
+configs:
+  - nodejs
+env:
+  LOG_LEVEL: warn

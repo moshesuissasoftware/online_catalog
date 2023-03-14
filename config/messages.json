@@ -1,0 +1,9 @@
+{
+  "app.headline": "Welcome to Zeus",
+  "app.nav.home": "Categories",
+  "app.nav.ovens": "Ovens",
+  "app.product.options": "Options",
+  "app.home.message": "To get started, edit {path} and save to reload.",
+  "app.about.message": "This is another page, it even has its own URL.",
+  "app.not-found.message": "Oh no! 404 - Page Not Found"
+}

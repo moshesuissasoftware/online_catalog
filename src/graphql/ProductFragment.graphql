@@ -1,0 +1,57 @@
+fragment Product on Product {
+  productId
+  id
+  name
+  slug
+  brand
+  headline
+  description
+  bullets
+  features
+  meta {
+    title
+    description
+  }
+  images
+  originalImages
+  price
+  discountPrice
+  tags
+  variantFilter {
+    label
+    filter
+  }
+  variant
+  variants {
+    attribute
+    products {
+      id
+      slug
+      color
+      size
+      features
+    }
+  }
+  master
+  color
+  pdfLink
+  pdfLink1
+  pdfLink2
+  pdfLink3
+  pdfLink4
+  pdfLink5
+  size
+  subCategory
+  filterPage {
+    id
+    name
+    slug
+  }
+  # Needed for omni-hercules-scripts notifications
+  group
+  favoritedAt
+  productRelations {
+    id
+    sortOrder
+  }
+}

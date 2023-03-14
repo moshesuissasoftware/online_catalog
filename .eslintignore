@@ -1,0 +1,7 @@
+node_modules
+__fixtures__
+flow-typed
+/packages/zeus-react-scripts/template/
+/packages/zeus-components/lib/
+/packages/zeus-components/dist/
+apps/**/build

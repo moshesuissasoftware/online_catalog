@@ -1,0 +1,69 @@
+{
+  "name": "opc",
+  "version": "1.4.2",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write {**/,}*.{js,json,md}",
+    "build": "zeus-react-scripts build --server",
+    "precommit": "zeus-react-scripts precommit",
+    "postmerge": "zeus-react-scripts postmerge",
+    "serve": "zeus-react-server ./build/server.js --server",
+    "start": "zeus-react-scripts start",
+    "test": "zeus-react-scripts test",
+    "export-messages": "zeus-export-messages",
+    "export-features": "node scripts/export-features.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@nobia/eslint-config",
+      "@nobia/eslint-config/react"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "@nobia/stylelint-config"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@nobia/auth-express-middleware": "^4.0.20",
+    "@nobia/zeus-components": "4.2.37",
+    "@nobia/zeus-react-server": "4.0.49",
+    "core-js": "^3.4.2",
+    "lodash": "^4.17.15",
+    "node-fetch": "^2.6.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-ga": "^2.7.0",
+    "react-markdown": "^3.6.0",
+    "react-masonry-component": "^6.2.1",
+    "react-nested-status": "^0.2.1",
+    "react-screen-keyboard": "^1.4.1",
+    "sitemap": "^2.2.0"
+  },
+  "devDependencies": {
+    "@nobia/eslint-config": "3.0.6",
+    "@nobia/zeus-export-messages": "3.0.0",
+    "@nobia/zeus-react-scripts": "4.0.67",
+    "eslint": "^4.7.2",
+    "husky": "^1.1.3",
+    "lint-staged": "^8.1.5",
+    "prettier": "^2.7.1"
+  }
+}

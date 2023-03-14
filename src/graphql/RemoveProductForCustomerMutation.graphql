@@ -1,0 +1,5 @@
+mutation RemoveProductForCustomerMutation($input: ProductCustomerInput!) {
+  removeProductForCustomer(input: $input) {
+    productId
+  }
+}

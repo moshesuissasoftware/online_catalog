@@ -1,0 +1,11 @@
+#import './ProductFragment.graphql'
+
+query FeaturedProductsQuery($group: String, $slug: String, $pageSize: Int) {
+  productFilterPage(slug: $slug, group: $group) {
+    slug
+    name
+    products(pageSize: $pageSize) {
+      ...Product
+    }
+  }
+}

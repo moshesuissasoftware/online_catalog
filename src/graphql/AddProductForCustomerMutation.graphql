@@ -1,0 +1,10 @@
+#import "./ProductFragment.graphql"
+
+mutation AddProductForCustomerMutation($input: ProductCustomerInput!) {
+  addProductForCustomer(input: $input) {
+    customerId
+    product {
+      ...Product
+    }
+  }
+}
